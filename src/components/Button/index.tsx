@@ -24,7 +24,6 @@ export const Button = styled.button<ButtonSCProps>`
     padding: 0.75rem 1.5rem;
     text-transform: uppercase;
     border-radius: 9999px;
-    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
 
