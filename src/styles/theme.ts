@@ -10,6 +10,9 @@ export const theme = {
     full: "9999px",
     lg: "0.5rem",
   },
+  shadow: {
+    default: "0 0 12px 2px rgba(0, 0, 0, 0.1)",
+  },
   transition: {
     default: "0.2s",
   },
