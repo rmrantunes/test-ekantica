@@ -1,14 +1,21 @@
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "styles/GlobalStyle";
-import { theme } from "styles/theme";
+
 import { Header } from "components/Header";
+import { AppNavigation } from "components/AppNavigation";
+import { PageBox } from "components/pages/_app/PageBox";
+
+import { theme } from "styles/theme";
 
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Header />
-      <Component {...pageProps} />
+      <AppNavigation />
+      <PageBox>
+        <Component {...pageProps} />
+      </PageBox>
     </ThemeProvider>
   );
 }
