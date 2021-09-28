@@ -10,7 +10,7 @@ export function AppNavigationButton(props: AppNavigationButtonProps) {
   const { href = "", ...propsRest } = props;
   return (
     <Link href={href} passHref>
-      <S.Button {...propsRest}>{props.children}</S.Button>
+      <S.Button {...propsRest} />
     </Link>
   );
 }
