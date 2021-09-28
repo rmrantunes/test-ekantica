@@ -15,6 +15,7 @@ export const theme = {
   },
   transition: {
     default: "0.2s",
+    halfSecond: "0.5s",
   },
 } as const;
 
