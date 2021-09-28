@@ -4,6 +4,7 @@ export const theme = {
     white: "#FFFFFF",
     lightGray: "#F6F7FB",
     gray: "#6D828B",
+    red: "#FE3636",
   },
   rounded: {
     full: "9999px",
