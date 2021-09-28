@@ -7,6 +7,7 @@ export const theme = {
   },
   rounded: {
     full: "9999px",
+    lg: "0.5rem",
   },
   transition: {
     default: "0.2s",
