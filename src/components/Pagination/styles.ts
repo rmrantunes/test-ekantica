@@ -19,8 +19,8 @@ export const PaginationButton = styled.button<PaginationButtonSCProps>`
     background: ${isActive ? theme.colors.purple : "transparent"};
     color: ${isActive ? theme.colors.white : theme.colors.gray};
     box-shadow: ${isActive ? theme.shadow.default : ""};
-    height: 1.75rem;
-    min-width: 1.75rem;
+    height: 2rem;
+    min-width: 2rem;
     padding: 0 0.25rem;
     border: none;
     cursor: pointer;
