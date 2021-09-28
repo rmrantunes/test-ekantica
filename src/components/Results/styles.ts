@@ -1,6 +1,11 @@
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
+  display: grid;
+  gap: 1.5rem;
+`;
+
+export const List = styled.div`
   ${({ theme }) => css`
     background: ${theme.colors.white};
     padding: 2rem 2rem;
