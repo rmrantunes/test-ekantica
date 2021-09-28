@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import apiConfig from "config/api";
+import { DefaultResquestResponse, Region } from "types/api";
 import { SwitchVerticalIcon } from "@heroicons/react/outline";
 
 import { RadioInput } from "components/RadioInput";
@@ -5,19 +8,19 @@ import { ResultsEditOrRemove } from "../EditOrRemove";
 
 import * as S from "./styles";
 
-const regions = [
-  { idRegion: 1, nameRegion: "BRF HQ" },
-  { idRegion: 2, nameRegion: "BRF HQ - In Natura" },
-  { idRegion: 3, nameRegion: "BRF HQ - Processados" },
-  { idRegion: 5, nameRegion: "RG Nordeste" },
-  { idRegion: 7, nameRegion: "RG São Paulo Capital" },
-  { idRegion: 8, nameRegion: "RG São Paulo Interior" },
-  { idRegion: 9, nameRegion: "RG Sul" },
-  { idRegion: 4, nameRegion: "RG Centro Norte" },
-  { idRegion: 6, nameRegion: "RG Sudeste" },
-];
-
 export function ResultsTable() {
+  const [regions, setRegions] = useState<Region[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      const response = await fetch(apiConfig.requestEndpoints.default);
+
+      const data = (await response.json()) as DefaultResquestResponse;
+
+      setRegions(data.regions);
+    })();
+  });
+
   return (
     <S.Wrapper>
       <S.Thead>
