@@ -32,7 +32,7 @@ export const Button = styled.button<ButtonSCProps>`
     ${buttonModifiers.variant[variant](theme)}
 
     &:hover {
-      filter: brightness(0.8);
+      filter: brightness(0.9);
     }
   `}
 `;
