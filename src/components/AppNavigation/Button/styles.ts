@@ -15,7 +15,7 @@ const selectedButtonKeyframe = keyframes`
 export const Button = styled.a<AppNavigationButtonSCProps>`
   ${({ theme, isActive }) => css`
     position: relative;
-    padding: 0.5rem;
+    padding: 0.75rem;
     cursor: pointer;
 
     transition: ${theme.transition.default};
