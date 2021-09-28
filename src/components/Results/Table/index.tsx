@@ -1,5 +1,8 @@
 import { SwitchVerticalIcon } from "@heroicons/react/outline";
+
+import { RadioInput } from "components/RadioInput";
 import { ResultsEditOrRemove } from "../EditOrRemove";
+
 import * as S from "./styles";
 
 const regions = [
@@ -32,13 +35,16 @@ export function ResultsTable() {
       </S.Thead>
       <S.Tbody>
         {regions.map((region) => (
-          <S.TbodyTr key={region.idRegion}>
-            <td>{region.idRegion}</td>
-            <td>{region.nameRegion}</td>
-            <td>
-              <ResultsEditOrRemove />
-            </td>
-          </S.TbodyTr>
+          <S.TbodyTrFlex key={region.idRegion}>
+            <RadioInput name="region" id={`region-${region.idRegion}`} />
+            <S.TbodyTr>
+              <td>{region.idRegion}</td>
+              <td>{region.nameRegion}</td>
+              <td>
+                <ResultsEditOrRemove />
+              </td>
+            </S.TbodyTr>
+          </S.TbodyTrFlex>
         ))}
       </S.Tbody>
     </S.Wrapper>

@@ -21,6 +21,8 @@ export const Thead = styled.thead`
     background: ${theme.colors.lightGray};
     padding: 0.5rem 1rem;
     display: block;
+
+    margin-left: 2.5rem;
   `}
 `;
 
@@ -46,6 +48,15 @@ export const Tbody = styled.tbody`
   }
 `;
 
+export const TbodyTrFlex = styled.div`
+  display: flex;
+  align-items: center;
+
+  > * + * {
+    margin-left: 1rem;
+  }
+`;
+
 export const TbodyTr = styled.tr<TBodyTrSCProps>`
   ${({ theme, isDisabled }) => css`
     color: ${theme.colors[isDisabled ? "gray" : "black"]};
@@ -56,3 +67,4 @@ export const TbodyTr = styled.tr<TBodyTrSCProps>`
     }
   `}
 `;
+
