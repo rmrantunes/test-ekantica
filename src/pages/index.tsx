@@ -1,7 +1,7 @@
 import { OfficeBuildingIcon } from "@heroicons/react/outline";
 
 import { PageTitle } from "components/PageTitle";
-import { Main } from "components/pages/index/Main";
+import { Main } from "components/Main";
 import { Results } from "components/Results";
 
 export default function Home() {

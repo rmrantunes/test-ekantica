@@ -3,7 +3,7 @@ import GlobalStyle from "styles/GlobalStyle";
 
 import { Header } from "components/Header";
 import { AppNavigation } from "components/AppNavigation";
-import { PageBox } from "components/pages/_app/PageBox";
+import { PageBox } from "components/PageBox";
 
 import { theme } from "styles/theme";
 
