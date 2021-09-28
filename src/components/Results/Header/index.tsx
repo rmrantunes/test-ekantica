@@ -1,13 +1,12 @@
-import styled from "styled-components";
+import { ResultsActions } from "../Actions";
+import { ResultsSearchOrAdd } from "../SearchOrAdd";
+import * as S from "./styles";
 
-export const ResultsHeader = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: stretch;
-  }
-`;
+export function ResultsHeader() {
+  return (
+    <S.ResultsHeader>
+      <ResultsActions />
+      <ResultsSearchOrAdd />
+    </S.ResultsHeader>
+  );
+}
